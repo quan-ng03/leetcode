@@ -4,7 +4,7 @@
     Goes into the loop and for every found open bracket, insert the corresponding closing bracket in the first index of the storage list
     If it finds a closing bracket, first check if storage is empty, then check if the first index of the storage list is the same as the 
     closing bracket, if it is, pop it from the list.
-    By the end of s, return false if storage is not empty, else return true
+    By the end of s, return false if storage is not empty, else return true.
 """
 
 def isValid(s):
