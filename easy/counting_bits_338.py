@@ -7,10 +7,10 @@ def countBits1(n):
     # the solution with O(n log n) time complexity and O(n) space complexity.
 
     binary_list = []
-    for i in range(n+1):
+    for i in range(n + 1):
         counter = 0
         while i > 0:
-            bit = i % 2 
+            bit = i % 2
             if bit == 1:
                 counter += 1
             i //= 2
@@ -26,8 +26,6 @@ def countBits2(n):
     # binary representation of 8 is the same as the binary representation of 4 with an additional 0 at the end. This is the optimized solution with O(n) time complexity
     # and O(n) space complexity.
     binary_list = [0] * (n + 1)
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         binary_list[i] = binary_list[i // 2] + i % 2
     return binary_list
-        
-        

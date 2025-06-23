@@ -1,16 +1,17 @@
+"""
+Lowkey hardcoded this.
+1. Convert the linked list to integer
+2. Add them, convert the sum to string and reverse it, then convert it to list
+3. Create a new linked list and add the elements from the list to the linked list
+"""
 
-"""
-    Lowkey hardcoded this.
-    1. Convert the linked list to integer
-    2. Add them, convert the sum to string and reverse it, then convert it to list
-    3. Create a new linked list and add the elements from the list to the linked list
-"""
 
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-        
+
+
 def addTwoNumbers(l1, l2):
     """
     :type l1: Optional[ListNode]
@@ -39,9 +40,3 @@ def addTwoNumbers(l1, l2):
         current.next = ListNode(i)
         current = current.next
     return result.next
-
-
-
-
-    
-    

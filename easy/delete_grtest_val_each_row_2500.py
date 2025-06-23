@@ -1,9 +1,9 @@
 def deleteGreatestValue(grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        """
+    """
+    :type grid: List[List[int]]
+    :rtype: int
+    """
+    """
         Initial constraint is grid cannot be empty, there's always at least 1 row and 1 column
         Brute force:
         - One loop to make changes on grid until it is empty
@@ -11,16 +11,17 @@ def deleteGreatestValue(grid):
         - After that second loop, store the max value among all rows and add to the result variable
         Time complexity is O(mn^2) and Space complexity is O(1)
         """
-        result = 0
-        while grid[0]:
-            value = 0
-            for i in range(len(grid)):
-                if value < max(grid[i]):
-                    value = max(grid[i])
-                grid[i].remove(max(grid[i]))
-            result += value
-            print(result, grid)
-        return result
+    result = 0
+    while grid[0]:
+        value = 0
+        for i in range(len(grid)):
+            if value < max(grid[i]):
+                value = max(grid[i])
+            grid[i].remove(max(grid[i]))
+        result += value
+        print(result, grid)
+    return result
+
 
 def deleteGreatestValueBetter(grid):
     """

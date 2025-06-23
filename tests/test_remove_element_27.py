@@ -1,6 +1,7 @@
 import unittest
 from easy.remove_element_27 import removeElement
 
+
 class TestRemoveElement(unittest.TestCase):
     def test_remove_element(self):
         nums = [3, 2, 2, 3]
@@ -23,6 +24,6 @@ class TestRemoveElement(unittest.TestCase):
         self.assertEqual(k, 0)  # Expected length
         self.assertCountEqual(nums[:k], [])  # Expected elements
 
+
 if __name__ == "__main__":
     unittest.main()
-

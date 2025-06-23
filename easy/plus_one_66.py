@@ -1,9 +1,9 @@
 def plusOne(digits):
-        """
-        :type digits: List[int]
-        :rtype: List[int]
-        """
-        """
+    """
+    :type digits: List[int]
+    :rtype: List[int]
+    """
+    """
         My first thought is to check if the last list element equals to 9 or not.
         If it doesn't, then I will plus one to that last element and return.
         If it does, then I will loop through the list from the end to the beginning.
@@ -12,20 +12,21 @@ def plusOne(digits):
         The time complexity is O(n) where n is the number of digits in the list.
         The space complexity is O(n) if we consider the space used for the output list.
         """
-        if digits[-1] != 9:
-            digits[-1] += 1
-            return digits
-        else:
-            number = 0
-            multiplicity = 1
-            for i in reversed(range(len(digits))):
-                number = number + (digits[i] * multiplicity)
-                multiplicity *= 10
-            number += 1
-            digits = list(map(int, str(number)))
-            print(digits)
+    if digits[-1] != 9:
+        digits[-1] += 1
         return digits
-    
+    else:
+        number = 0
+        multiplicity = 1
+        for i in reversed(range(len(digits))):
+            number = number + (digits[i] * multiplicity)
+            multiplicity *= 10
+        number += 1
+        digits = list(map(int, str(number)))
+        print(digits)
+    return digits
+
+
 def plusOneBetter(digits):
     """
     :type digits: List[int]
@@ -41,11 +42,9 @@ def plusOneBetter(digits):
     The time complexity is O(n) and the space complexity is O(1). There's only one case
     where the space complexity is O(n) which is when all digits are 9.
     """
-    for i in range(len(digits)-1, -1, -1):
+    for i in range(len(digits) - 1, -1, -1):
         if digits[i] < 9:
             digits[i] += 1
             return digits
         digits[i] = 0
     return [1] + digits
-        
-        
